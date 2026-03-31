@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ISM Driving Solutions — Friendly, patient driving lessons on the Wirral and surrounding areas. Learn to drive with confidence. Book today.">
+<meta name="keywords" content="driving lessons Wirral, driving instructor Wirral, ISM Driving Solutions, learn to drive Wirral, driving school CH63">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ISM Driving Solutions | Driving Lessons on the Wirral">
+<meta property="og:description" content="Friendly, patient driving tuition across the Wirral. Strong first-time pass rate. Book your lesson today.">
+<meta property="og:type" content="website">
+<title>ISM Driving Solutions | Driving Lessons on the Wirral</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Nunito+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #d42b2b;
+    --red-light: #fdf0f0;
+    --red-dark: #b02020;
+    --black: #1a1a1a;
+    --dark: #2d2d2d;
+    --gray: #f4f4f2;
+    --gray-mid: #e8e8e5;
+    --gray-text: #666;
+    --white: #ffffff;
+    --font-head: 'Nunito', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.97);
+    border-bottom: 1px solid var(--gray-mid);
+    backdrop-filter: blur(8px);
+    padding: 0 2rem;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+
+  .logo-mark {
+    width: 42px; height: 42px;
+    background: var(--red);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1rem;
+    color: var(--white);
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+  }
+
+  .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+  .logo-text .top { font-family: var(--font-head); font-weight: 800; font-size: 1.1rem; color: var(--black); }
+  .logo-text .top .l-red { color: var(--red); }
+  .logo-text .bot { font-size: 0.68rem; color: var(--gray-text); font-weight: 500; letter-spacing: 0.05em; }
+
+  .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+  .nav-links a { font-family: var(--font-head); font-weight: 600; font-size: 0.9rem; color: var(--dark); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--red); }
+
+  .nav-book {
+    background: var(--red);
+    color: var(--white) !important;
+    padding: 0.5rem 1.3rem;
+    border-radius: 50px;
+    font-size: 0.88rem !important;
+  }
+  .nav-book:hover { background: var(--red-dark) !important; color: var(--white) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--black); border-radius: 2px; transition: all 0.3s; }
+
+  .mobile-menu {
+    display: none; position: fixed;
+    top: 68px; left: 0; right: 0;
+    background: var(--white);
+    border-bottom: 1px solid var(--gray-mid);
+    z-index: 99; padding: 1.5rem 2rem;
+    flex-direction: column; gap: 1.2rem;
+    box-shadow: var(--shadow);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: var(--font-head); font-weight: 600; font-size: 1rem; color: var(--dark); text-decoration: none; }
+  .mobile-menu a:hover { color: var(--red); }
+  .mobile-menu .m-book { color: var(--red) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--gray);
+    padding: 7rem 2rem 5rem;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 60px;
+    background: var(--white);
+    clip-path: ellipse(55% 100% at 50% 100%);
+  }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--red-light);
+    color: var(--red);
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards 0.2s;
+  }
+
+  .hero h1 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    line-height: 1.15;
+    color: var(--black);
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards 0.35s;
+  }
+
+  .hero h1 .accent { color: var(--red); }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--gray-text);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    max-width: 440px;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards 0.5s;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards 0.65s;
+  }
+
+  .btn-red {
+    background: var(--red);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    display: inline-block;
+    box-shadow: 0 4px 16px rgba(212,43,43,0.3);
+  }
+  .btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 6px 20px rgba(212,43,43,0.4); }
+
+  .btn-outline {
+    border: 2px solid var(--gray-mid);
+    color: var(--dark);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: border-color 0.2s, transform 0.2s;
+    display: inline-block;
+    background: var(--white);
+  }
+  .btn-outline:hover { border-color: var(--red); color: var(--red); transform: translateY(-2px); }
+
+  .hero-stats {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-mid);
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards 0.8s;
+  }
+
+  .stat { display: flex; flex-direction: column; }
+  .stat-n { font-family: var(--font-head); font-weight: 800; font-size: 1.8rem; color: var(--red); line-height: 1; }
+  .stat-l { font-size: 0.78rem; color: var(--gray-text); font-weight: 500; margin-top: 0.2rem; }
+
+  .hero-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards 0.4s;
+  }
+
+  .hero-card h3 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--black);
+  }
+
+  .check-list { list-style: none; display: flex; flex-direction: column; gap: 0.9rem; }
+
+  .check-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    color: var(--dark);
+    font-weight: 500;
+  }
+
+  .check-list li::before {
+    content: '';
+    width: 22px; height: 22px;
+    background: var(--red);
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='white'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero-phone {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--gray-mid);
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .phone-icon {
+    width: 40px; height: 40px;
+    background: var(--red-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .hero-phone a {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.15rem;
+    color: var(--red);
+    text-decoration: none;
+  }
+
+  .hero-phone span { font-size: 0.78rem; color: var(--gray-text); display: block; }
+
+  /* ── TRUST BAR ── */
+  .trust-bar {
+    background: var(--red);
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--white);
+  }
+
+  /* ── SHARED ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  .section-label {
+    display: inline-block;
+    background: var(--red-light);
+    color: var(--red);
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--gray-text);
+    max-width: 540px;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+  }
+
+  /* ── WHY US ── */
+  .why { background: var(--white); }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .why-card {
+    background: var(--gray);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+
+  .why-icon {
+    width: 52px; height: 52px;
+    background: var(--red-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .why-card h3 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+  }
+
+  .why-card p { font-size: 0.9rem; color: var(--gray-text); line-height: 1.7; }
+
+  /* ── INSTRUCTORS ── */
+  .instructors { background: var(--gray); }
+
+  .instructors-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .instructor-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .instr-avatar {
+    width: 64px; height: 64px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.4rem;
+    color: var(--white);
+  }
+
+  .instr-name {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--black);
+  }
+
+  .instr-role {
+    display: inline-block;
+    background: var(--red-light);
+    color: var(--red);
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+  }
+
+  .instructor-card p { font-size: 0.92rem; color: var(--gray-text); line-height: 1.75; }
+
+  /* ── SERVICES ── */
+  .services { background: var(--white); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 1.2rem;
+  }
+
+  .service-card {
+    border: 2px solid var(--gray-mid);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .service-card:hover { border-color: var(--red); transform: translateY(-3px); box-shadow: var(--shadow); }
+
+  .service-emoji { font-size: 1.8rem; }
+
+  .service-card h3 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--black);
+  }
+
+  .service-card p { font-size: 0.88rem; color: var(--gray-text); line-height: 1.65; }
+
+  /* ── PRICING ── */
+  .pricing { background: var(--gray); }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .price-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    position: relative;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 2px solid transparent;
+  }
+  .price-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+
+  .price-card.featured { border-color: var(--red); }
+
+  .price-badge {
+    position: absolute;
+    top: -14px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--red);
+    color: var(--white);
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.72rem;
+    padding: 0.3rem 1rem;
+    border-radius: 50px;
+    white-space: nowrap;
+  }
+
+  .price-type {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: var(--gray-text);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.8rem;
+  }
+
+  .price-amount {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 3rem;
+    color: var(--red);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .price-duration {
+    font-family: var(--font-head);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--gray-text);
+    margin-bottom: 1rem;
+  }
+
+  .price-desc { font-size: 0.82rem; color: var(--gray-text); line-height: 1.5; }
+
+  .pricing-note {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    padding: 1.2rem 1.5rem;
+    font-size: 0.88rem;
+    color: var(--gray-text);
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    border-left: 3px solid var(--red);
+  }
+
+  /* ── REVIEWS ── */
+  .reviews { background: var(--white); }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .review-card {
+    background: var(--gray);
+    border-radius: var(--radius);
+    padding: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.25s, box-shadow 0.25s;
+  }
+  .review-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+
+  .review-stars { display: flex; gap: 3px; }
+  .star {
+    width: 16px; height: 16px;
+    background: #00b67a;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+  }
+
+  .review-text {
+    font-size: 0.93rem;
+    color: var(--dark);
+    line-height: 1.75;
+    flex: 1;
+  }
+
+  .review-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+
+  .review-avatar {
+    width: 36px; height: 36px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+
+  .review-name {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--black);
+  }
+
+  .review-source { font-size: 0.75rem; color: var(--gray-text); }
+
+  .tp-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tp-row .tp-stars { display: flex; gap: 3px; }
+  .tp-row span { font-size: 0.85rem; color: var(--gray-text); font-weight: 500; }
+
+  /* ── BOOKING ── */
+  .booking { background: var(--gray); }
+
+  .booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+  }
+
+  .booking-info p { font-size: 1rem; color: var(--gray-text); line-height: 1.8; margin-bottom: 2rem; }
+
+  .contact-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: var(--shadow);
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contact-dot {
+    width: 42px; height: 42px;
+    background: var(--red-light);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+
+  .contact-row a {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--black);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .contact-row a:hover { color: var(--red); }
+
+  .contact-row span {
+    font-size: 0.78rem;
+    color: var(--gray-text);
+    display: block;
+  }
+
+  .booking-widget-box {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-lg);
+  }
+
+  .booking-widget-box h3 {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.3rem;
+    margin-bottom: 0.6rem;
+    color: var(--black);
+  }
+
+  .booking-widget-box p {
+    font-size: 0.88rem;
+    color: var(--gray-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .widget-placeholder {
+    border: 2px dashed var(--gray-mid);
+    border-radius: var(--radius-sm);
+    padding: 3rem 2rem;
+    text-align: center;
+    color: var(--gray-text);
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 4rem 2rem 2rem;
+  }
+
+  .footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .footer-brand .f-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+  }
+
+  .footer-brand .f-mark {
+    width: 38px; height: 38px;
+    background: var(--red);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--white);
+  }
+
+  .footer-brand .f-name {
+    font-family: var(--font-head);
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--white);
+  }
+
+  .footer-brand .f-name .l-red { color: var(--red); }
+
+  .footer-brand p { font-size: 0.88rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 260px; }
+
+  .footer-col h4 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.2rem;
+  }
+
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+  .footer-col ul li a { font-size: 0.9rem; color: rgba(255,255,255,0.75); text-decoration: none; font-weight: 500; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: var(--white); }
+
+  .footer-bottom {
+    max-width: 1100px;
+    margin: 1.5rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+  .footer-bottom a { color: var(--red); text-decoration: none; font-weight: 600; font-size: 0.88rem; }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    .hero-inner { grid-template-columns: 1fr; }
+    .hero-card { display: none; }
+    .instructors-grid { grid-template-columns: 1fr; }
+    .booking-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 0 1.2rem; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 3.5rem 1.2rem; }
+    .hero { padding: 6rem 1.2rem 4rem; min-height: auto; }
+    .trust-bar { gap: 1rem; }
+    .pricing-grid { grid-template-columns: 1fr 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 480px) {
+    .pricing-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+    .hero-actions a { text-align: center; }
+    .hero-stats { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#home">
+    <div class="logo-mark">ISM</div>
+    <div class="logo-text">
+      <span class="top">ISM Driving So<span class="l-red">L</span>utions</span>
+      <span class="bot">Wirral &amp; Surrounding Areas</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#why">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#booking" class="nav-book">Book Now</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#why" onclick="closeMenu()">About</a>
+  <a href="#services" onclick="closeMenu()">Services</a>
+  <a href="#pricing" onclick="closeMenu()">Pricing</a>
+  <a href="#reviews" onclick="closeMenu()">Reviews</a>
+  <a href="#booking" onclick="closeMenu()" class="m-book">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">&#127775; Wirral's Friendly Driving School</div>
+      <h1>Learn to drive with <span class="accent">confidence</span> and a smile</h1>
+      <p class="hero-sub">Patient, friendly driving lessons tailored to your pace. Whether you're a complete beginner or heading towards your test — we're with you every step of the way.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn-red">Book a Lesson</a>
+        <a href="#pricing" class="btn-outline">See Prices</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-n">5&#9733;</span>
+          <span class="stat-l">Trustpilot rated</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">15+</span>
+          <span class="stat-l">Five-star reviews</span>
+        </div>
+        <div class="stat">
+          <span class="stat-n">CH63</span>
+          <span class="stat-l">Based on the Wirral</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Why students choose ISM</h3>
+      <ul class="check-list">
+        <li>Calm, patient instruction — no pressure</li>
+        <li>Lessons tailored to your learning style</li>
+        <li>Specialists in nervous &amp; anxious learners</li>
+        <li>Strong first-time pass rate</li>
+        <li>Flexible lesson times to suit you</li>
+        <li>Online booking &amp; secure payments</li>
+      </ul>
+      <div class="hero-phone">
+        <div class="phone-icon">&#128222;</div>
+        <div>
+          <a href="tel:07746338568">07746 338568</a>
+          <span>Call to ask anything — no obligation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item">&#9989; Fully qualified ADI instructors</div>
+  <div class="trust-item">&#9989; Specialists in nervous learners</div>
+  <div class="trust-item">&#9989; Strong first-time pass rate</div>
+  <div class="trust-item">&#9989; Flexible lesson times</div>
+</div>
+
+<!-- WHY US -->
+<section class="why" id="why">
+  <div class="container">
+    <span class="section-label">Why choose ISM</span>
+    <h2 class="section-title">Driving lessons built around you</h2>
+    <p class="section-sub">At ISM Driving Solutions, we believe learning to drive should be a positive, enjoyable experience — not a stressful one. Here's what makes us different.</p>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon">&#128149;</div>
+        <h3>Calm &amp; patient</h3>
+        <p>No rushing, no pressure. We go at your pace every single lesson and never push you to do anything you don't feel ready for.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">&#127775;</div>
+        <h3>Tailored to you</h3>
+        <p>Every lesson is adapted to your personal learning style and current ability — because no two learners are the same.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">&#128170;</div>
+        <h3>Nervous learner specialists</h3>
+        <p>Extensive experience helping anxious drivers build real, lasting confidence behind the wheel from day one.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">&#127942;</div>
+        <h3>Strong pass rate</h3>
+        <p>Multiple students passing on their very first attempt — including complete beginners who passed within weeks of starting.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTORS -->
+<section class="instructors" id="instructors">
+  <div class="container">
+    <span class="section-label">Meet the team</span>
+    <h2 class="section-title">Your instructors</h2>
+    <p class="section-sub">Friendly, experienced and fully qualified — here to support you every step of the way.</p>
+    <div class="instructors-grid">
+      <div class="instructor-card">
+        <div class="instr-avatar">IM</div>
+        <div>
+          <div class="instr-name">Ian McGivern</div>
+          <span class="instr-role">Lead Instructor</span>
+        </div>
+        <p>Ian brings years of experience helping learners of all abilities get their licence. Known for his calm, warm approach and the ability to adapt to every student, Ian specialises in helping nervous drivers build genuine confidence behind the wheel. His students regularly pass first time — and enjoy every lesson along the way.</p>
+      </div>
+      <div class="instructor-card">
+        <div class="instr-avatar">S</div>
+        <div>
+          <div class="instr-name">Steve</div>
+          <span class="instr-role">Instructor</span>
+        </div>
+        <p>Steve joins the ISM team with the same patient, student-first approach that defines everything we do. Friendly, encouraging and fully qualified, Steve is passionate about helping learners feel at ease and build real skills they'll carry for life. We're delighted to have him on board.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <span class="section-label">What we offer</span>
+    <h2 class="section-title">Our services</h2>
+    <p class="section-sub">From your very first lesson to your driving test and beyond — we offer everything you need to become a safe, confident driver.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-emoji">&#128640;</div>
+        <h3>Beginner courses</h3>
+        <p>Never been behind the wheel? No problem. We start from the absolute basics and build your confidence gradually in a calm, supportive environment.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">&#127919;</div>
+        <h3>Test preparation</h3>
+        <p>Targeted lessons covering the specific skills and manoeuvres you'll need on test day — so you walk in feeling fully prepared and confident.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">&#128196;</div>
+        <h3>Mock exams</h3>
+        <p>Realistic test simulations that replicate the real experience — helping you know exactly what to expect and eliminating nerves before the big day.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">&#128260;</div>
+        <h3>Refresher lessons</h3>
+        <p>Been off the road for a while? Our refresher lessons help you quickly rebuild confidence and update your skills at your own pace.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">&#128739;</div>
+        <h3>Motorway lessons</h3>
+        <p>Post-test motorway tuition for newly qualified drivers who want to build confidence on faster roads safely and with proper guidance.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">&#128737;</div>
+        <h3>Defensive driving</h3>
+        <p>Advanced skills to make you a safer, more aware driver — ideal for anyone wanting to go beyond simply passing the test.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-emoji">&#128269;</div>
+        <h3>Assessment sessions</h3>
+        <p>Not sure what level you're at? An assessment session helps us understand exactly where you are and plan the best path forward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <span class="section-label">Transparent pricing</span>
+    <h2 class="section-title">Simple, honest prices</h2>
+    <p class="section-sub">No hidden fees, no surprises. Block bookings offer great value and guarantee your regular slot.</p>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-type">Single lesson</div>
+        <div class="price-amount">£57</div>
+        <div class="price-duration">75 minutes</div>
+        <div class="price-desc">Great for regular weekly lessons at a steady pace</div>
+      </div>
+      <div class="price-card">
+        <div class="price-type">Single lesson</div>
+        <div class="price-amount">£76</div>
+        <div class="price-duration">100 minutes</div>
+        <div class="price-desc">More time per session to really get into things</div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Best value</div>
+        <div class="price-type">Block booking</div>
+        <div class="price-amount">£185</div>
+        <div class="price-duration">5 lessons · 250 mins</div>
+        <div class="price-desc">Save money and lock in your regular slot</div>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Most popular</div>
+        <div class="price-type">Block booking</div>
+        <div class="price-amount">£360</div>
+        <div class="price-duration">10 lessons · 500 mins</div>
+        <div class="price-desc">The best way to make fast, consistent progress</div>
+      </div>
+    </div>
+    <div class="pricing-note">
+      <span>&#128205;</span>
+      <span>A £2 supplement applies per lesson for collections outside a 10-mile radius of CH63. No extra charge within the 10-mile zone.</span>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <span class="section-label">What students say</span>
+    <h2 class="section-title">Real students, real results</h2>
+    <p class="section-sub">Don't just take our word for it — here's what some of our students have said on Trustpilot.</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="review-text">"He adapted to my learning style and taught me very well. I had very little experience when I started and passed my practical test on my first try after just a month of lessons."</p>
+        <div class="review-footer">
+          <div class="review-avatar">RB</div>
+          <div><div class="review-name">Radek Bortnik</div><div class="review-source">Trustpilot</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="review-text">"Passed first try within 10 weeks of lessons, from knowing nothing to passing. I would 100% recommend to anyone at any ability willing to put in the time and effort."</p>
+        <div class="review-footer">
+          <div class="review-avatar">C</div>
+          <div><div class="review-name">CYH</div><div class="review-source">Trustpilot</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="review-text">"After two previous instructors and not having a good experience, Ian has always been calm, patient and understanding. He's helped me stay calm and confident ahead of my test."</p>
+        <div class="review-footer">
+          <div class="review-avatar">HB</div>
+          <div><div class="review-name">Hayley Bradburn</div><div class="review-source">Trustpilot</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="review-text">"Always incredibly understanding and a great teacher — I looked forward to each lesson as I learned something new every time. Would recommend to anyone. Thank you Ian!"</p>
+        <div class="review-footer">
+          <div class="review-avatar">J</div>
+          <div><div class="review-name">Juliette</div><div class="review-source">Trustpilot</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="review-text">"The most patient and loveliest driving instructor. He will go at a pace that you feel comfortable with so the lesson won't feel rushed or confusing."</p>
+        <div class="review-footer">
+          <div class="review-avatar">L</div>
+          <div><div class="review-name">Lotts</div><div class="review-source">Trustpilot</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+        <p class="review-text">"Best driving instructor you could ask for. Calm and understanding, and he won't make you do anything you don't feel ready for. I couldn't have passed without him."</p>
+        <div class="review-footer">
+          <div class="review-avatar">DC</div>
+          <div><div class="review-name">Drew Crone</div><div class="review-source">Trustpilot</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="tp-row">
+      <div class="tp-stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div>
+      <span>Rated 5 stars on Trustpilot · All reviews verified</span>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+  <div class="container">
+    <div class="booking-grid">
+      <div class="booking-info">
+        <span class="section-label">Get started</span>
+        <h2 class="section-title">Ready to book?</h2>
+        <p>Book your first lesson online or give us a call — we'll get you on the road as quickly as possible. We cover the Wirral and surrounding areas from our base in CH63.</p>
+        <div class="contact-card">
+          <div class="contact-row">
+            <div class="contact-dot">&#128222;</div>
+            <div>
+              <a href="tel:07746338568">07746 338568</a>
+              <span>Call or text anytime</span>
+            </div>
+          </div>
+          <div class="contact-row">
+            <div class="contact-dot">&#128205;</div>
+            <div>
+              <a href="#">Wirral &amp; Surrounding Areas</a>
+              <span>Based in CH63 · 10 mile radius covered</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="booking-widget-box">
+        <h3>Book online</h3>
+        <p>Choose your lesson type and preferred time slot directly through our booking system. Secure online payment included.</p>
+        <div class="widget-placeholder">
+          [ Total Drive booking widget will appear here ]
+        </div>
+        <a href="tel:07746338568" class="btn-red" style="width:100%;text-align:center;display:block;">Or call us — 07746 338568</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a class="f-logo" href="#home">
+        <div class="f-mark">ISM</div>
+        <div class="f-name">ISM Driving So<span class="l-red">L</span>utions</div>
+      </a>
+      <p>Friendly, professional driving tuition across the Wirral and surrounding areas. Helping learners become safe, confident drivers since day one.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">Beginner courses</a></li>
+        <li><a href="#services">Test preparation</a></li>
+        <li><a href="#services">Mock exams</a></li>
+        <li><a href="#services">Refresher lessons</a></li>
+        <li><a href="#services">Motorway lessons</a></li>
+        <li><a href="#services">Defensive driving</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:07746338568">07746 338568</a></li>
+        <li><a href="#booking">Book a lesson</a></li>
+        <li><a href="#why">About us</a></li>
+        <li><a href="#reviews">Student reviews</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 ISM Driving Solutions. All rights reserved.</p>
+    <a href="tel:07746338568">07746 338568</a>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+  function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); closeMenu(); }
+    });
+  });
+</script>
+</body>
+</html>
